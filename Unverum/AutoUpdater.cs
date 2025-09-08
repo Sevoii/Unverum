@@ -24,6 +24,9 @@ namespace Unverum
 
         public static async Task<bool> CheckForUnverumUpdate(CancellationTokenSource cancellationToken)
         {
+            // Disable AutoUpdate
+            return false;
+            
             // Get Version Number
             var localVersion = FileVersionInfo.GetVersionInfo(Assembly.GetExecutingAssembly().Location).FileVersion;
             try

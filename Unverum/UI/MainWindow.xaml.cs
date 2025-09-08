@@ -1083,6 +1083,10 @@ namespace Unverum
         }
         private void Update_Click(object sender, RoutedEventArgs e)
         {
+            // Dumb way of doing it, but it's ok :)
+            Global.logger.WriteLine("Downloading UE4SS files", LoggerType.Info);
+            new UE4SSDownloader().UpdateFiles();
+            
             Global.logger.WriteLine("Checking for updates...", LoggerType.Info);
             GameBox.IsEnabled = false;
             ModGrid.IsEnabled = false;
